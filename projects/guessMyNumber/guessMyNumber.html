@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/projects/guessMyNumber/style.css" />
+    <title>Guess</title>
+  </head>
+
+  <body>
+    <main>
+      <h1>Guess My Number</h1>
+      <div id="guessWrapper"></div>
+      <div id="guess-input">
+        <label for="guess">1 - 100</label>
+        <input id="guess" type="number" min="1" max="100" autocomplete="off" />
+
+        <div id="info">
+          <h2 id="guessInfo">Make a Guess!</h2>
+          <h2 id="highScoreInfo">High Score:</h2>
+        </div>
+      </div>
+      <h3 id="hint"></h3>
+      <div class="userControls">
+        <button id="check">Check</button>
+        <button id="restart">New Number</button>
+      </div>
+    </main>
+    <script src="guess.js"></script>
+  </body>
+</html>
