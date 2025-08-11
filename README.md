@@ -1,5 +1,5 @@
 # taskmanager
 
-Hello, basic task manager website project.
+Hello
 
 https://angelledesma.xyz/
