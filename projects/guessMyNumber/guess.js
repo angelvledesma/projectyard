@@ -8,7 +8,7 @@ let displayGuess = document.getElementById("guessWrapper");
 let buttonCheck = document.getElementById("check");
 let guessInfo = document.getElementById("guessInfo");
 let highScoreInfo = document.getElementById("highScoreInfo");
-let score = 0;
+let currentScore = 0;
 let highScore = 100;
 let buttonRestart = document.getElementById("restart");
 
@@ -27,22 +27,36 @@ buttonCheck.addEventListener("click", () => {
   guessWrapper.textContent = guess.value;
   if (Number(guess.value) === randomNumber) {
     guessInfo.textContent = `Correct Guess!`;
-    if (score < highScore) {
-      highScore = score;
+    guess.readOnly = true;
+    buttonCheck.disabled = true;
+    if (currentScore < highScore) {
+      highScore = currentScore;
       highScoreInfo.textContent = `High Score: ${highScore}`;
-      score = 1;
+      currentScore = 1;
     }
   } else {
     guessInfo.textContent = `Incorrect Guess!`;
     hints(randomNumber, guess);
-
-    score++;
+    currentScore++;
+    document.getElementById(
+      "scoreInfo"
+    ).textContent = `Current Score ${currentScore}`;
+    60;
   }
 });
 
 buttonRestart.addEventListener("click", () => {
+  guess.readOnly = false;
+  buttonCheck.disabled = false;
+  guessWrapper.textContent = ` `;
+  guess.value = "";
+  currentScore = 0;
+  document.getElementById(
+    "scoreInfo"
+  ).textContent = `Current Score ${currentScore}`;
+  guessInfo.textContent = `Make a Guess!`;
   randomNumber = Math.floor(Math.random() * 21);
   if (randomNumber === 0) randomNumber++;
-  score = 0;
+  currentScore = 0;
   console.log(randomNumber);
 });
