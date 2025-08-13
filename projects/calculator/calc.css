@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: aqua;
+}
+
+table {
+  margin-top: 1rem;
+  border-style: solid;
+  border-collapse: collapse;
+}
+
+td {
+  padding: 0.15rem;
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  text-align: center;
+  width: 50px;
+  height: 50px;
+}
+
+#calcWrapper {
+  margin-top: 5rem;
+  width: 400px;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(164, 210, 249);
+}
+
+#extraControls button {
+  margin-right: 0.5rem;
+}
+
+#delete {
+  margin-top: 0.5rem;
+  width: 100px;
+}
+
+#backSpace {
+  margin-top: 0.5rem;
+  width: 100px;
+}
+
+input {
+  text-align: center;
+}
