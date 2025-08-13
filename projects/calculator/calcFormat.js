@@ -1,10 +1,11 @@
 "use strict";
 
-const numPad = [7, 8, 9, `/`, 4, 5, 6, `*`, 1, 2, 3, `-`, 0, `.`, "=", "+"];
+// prettier-ignore
+const numPad = [7, 8, 9, `/`, 4, 5, 6, `*`, 1, 2, 3, `-`, 0, `.`, "**", "+"];
 // prettier-ignore
 const numPadID = ["seven", "eight", "nine", "divide", "four", "five", "six", 
   "multiply", "one", "two", "three", "subtract", "zero", "period", 
-  "equal", "plus"];
+  "power", "plus"];
 
 const buttonWrapper = document.getElementById("buttonWrapper");
 const table = buttonWrapper.appendChild(document.createElement("table"));
@@ -33,7 +34,15 @@ for (let i = 0; i < numPadID.length; i++) {
 
 const extraDiv = document.getElementById("extraControls");
 // prettier-ignore
-const deleteButton = buttonWrapper.appendChild(document.createElement("button"));
+
+const submit = buttonWrapper.appendChild(document.createElement("button"));
+extraDiv.appendChild(submit);
+submit.id = "submit";
+submit.textContent = "Submit";
+
+const deleteButton = buttonWrapper.appendChild(
+  document.createElement("button")
+);
 extraDiv.appendChild(deleteButton);
 deleteButton.id = "delete";
 deleteButton.textContent = "Delete";
