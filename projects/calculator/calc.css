@@ -9,14 +9,28 @@ body {
 }
 
 #textDisplay {
-  height: 1rem;
-  height: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  outline: solid;
+  outline-offset: 2px;
+  background-color: black;
+  text-align: center;
+  height: 40px;
+  width: 200px;
+  color: white;
+}
+
+#calcInput {
+  font-size: 4rem;
+  width: 325px;
+  height: 85px;
 }
 
 table {
   margin-top: 1rem;
-  border-style: solid;
-  border-collapse: collapse;
 }
 
 td {
@@ -27,21 +41,37 @@ td {
 
 button {
   text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
   width: 50px;
   height: 50px;
+  border-radius: 12px;
+}
+
+button:active {
+  background-color: black;
+  width: 51px;
+  height: 51px;
+  color: white;
 }
 
 #calcWrapper {
   margin-top: 5rem;
   width: 400px;
-  height: 400px;
+  height: 500px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(164, 210, 249);
+  background-color: rgb(72, 100, 123);
+  border-style: solid;
+  border-radius: 12px;
+  outline: solid;
+  outline-width: 10px;
+  outline-offset: -5px;
+  outline-color: black;
 }
 
 #extraControls button {
@@ -50,17 +80,12 @@ button {
 
 #delete {
   margin-top: 0.5rem;
-  width: 100px;
-}
-
-#backSpace {
-  margin-top: 0.5rem;
-  width: 100px;
+  width: 120px;
 }
 
 #submit {
   margin-top: 0.5rem;
-  width: 100px;
+  width: 120px;
 }
 
 input {
