@@ -157,7 +157,7 @@ document.addEventListener("click", (event) => {
   if (display.value.length > 7) {
     display.style.fontSize = "2rem";
   }
-  if (display.value.length > 20) {
+  if (display.value.length > 17) {
     display.style.fontSize = "1.5rem";
   }
 });
